@@ -26,7 +26,6 @@ class StudentRepositoryTest {
     {
         Guardian guardian = Guardian.builder().email("p@gmail.com").name("daddy").mobile("8989898989").build();
         Student student = Student.builder().guardian(guardian).emailId("prajvalddddtheking@gmail.com").firstName("PrajvalSingh").lastName("rajput").build();
-
         studentRepository.save(student);
     }
     @Test
