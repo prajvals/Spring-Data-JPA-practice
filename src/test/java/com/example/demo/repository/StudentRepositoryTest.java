@@ -37,10 +37,11 @@ class StudentRepositoryTest {
     @Test
     public void printStudentInfo()
     {
-        System.out.println(studentRepository.findStudentByFirstName("PrajvalSingh"));
-        System.out.println(studentRepository.findStudentByLastName("rajput"));
-        System.out.println(studentRepository.findStudentByGuardianName("hello"));
-        System.out.println(studentRepository.findStudentByFirstNameAndLastName("PrajvalSingh","rajput"));
+        System.out.println(studentRepository.getStudentByFirstName("PrajvalSingh1"));
+//        System.out.println(studentRepository.findStudentByFirstName("PrajvalSingh"));
+//        System.out.println(studentRepository.findStudentByLastName("rajput"));
+//        System.out.println(studentRepository.findStudentByGuardianName("hello"));
+//        System.out.println(studentRepository.findStudentByFirstNameAndLastName("PrajvalSingh","rajput"));
     }
 
 }
