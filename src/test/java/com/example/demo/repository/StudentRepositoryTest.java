@@ -16,7 +16,7 @@ class StudentRepositoryTest {
 
     @Test
     public void saveStudent() {
-//        Student student = Student.builder().emailId("prajvaltheking@gmail.com").firstName("Prajval Singh").lastName("Rajput")
+//        Student student = Student.b uilder().emailId("prajvaltheking@gmail.com").firstName("Prajval Singh").lastName("Rajput")
 
 //        studentRepository.save(student);
     }
@@ -24,14 +24,23 @@ class StudentRepositoryTest {
     @Test
     public void saveStudentWithGuardian()
     {
-        Guardian guardian = Guardian.builder().email("p@gmail.com").name("daddy").mobile("8989898989").build();
-        Student student = Student.builder().guardian(guardian).emailId("prajvalddddtheking@gmail.com").firstName("PrajvalSingh").lastName("rajput").build();
+        Guardian guardian = Guardian.builder().email("pthisisa@gmail.com").name("hello").mobile("89898998989").build();
+        Student student = Student.builder().guardian(guardian).emailId("thisisdfdfsdfsfwonderful@gmail.com").firstName("PrajvalSingh1").lastName("rajput").build();
         studentRepository.save(student);
     }
     @Test
     public void printAllStudents()
     {
         System.out.println(studentRepository.findAll());
+    }
+
+    @Test
+    public void printStudentInfo()
+    {
+        System.out.println(studentRepository.findStudentByFirstName("PrajvalSingh"));
+        System.out.println(studentRepository.findStudentByLastName("rajput"));
+        System.out.println(studentRepository.findStudentByGuardianName("hello"));
+        System.out.println(studentRepository.findStudentByFirstNameAndLastName("PrajvalSingh","rajput"));
     }
 
 }
