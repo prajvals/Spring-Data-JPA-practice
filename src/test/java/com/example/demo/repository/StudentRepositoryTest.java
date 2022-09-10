@@ -38,7 +38,7 @@ class StudentRepositoryTest {
     public void printStudentInfo()
     {
         System.out.println(studentRepository.getStudentByFirstName("PrajvalSingh1"));
-        System.out.println(studentRepository.getStudentByFirstNameNativeQuery("PrajvalSingh1"));
+        System.out.println(studentRepository.getStudentByFirstNameNativeQueryNamedParams("PrajvalSingh1"));
 //        System.out.println(studentRepository.findStudentByFirstName("PrajvalSingh"));
 //        System.out.println(studentRepository.findStudentByLastName("rajput"));
 //        System.out.println(studentRepository.findStudentByGuardianName("hello"));
