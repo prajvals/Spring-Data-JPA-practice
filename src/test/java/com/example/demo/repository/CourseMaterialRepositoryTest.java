@@ -23,6 +23,12 @@ class CourseMaterialRepositoryTest {
 
 //        courseMaterialRepository.save(courseMaterial);
     }
+    
+    @Test
+    public void fetchAll()
+    {
+        System.out.println("courseMaterialRepository.findAll() = " + courseMaterialRepository.findAll());
+    }
 
 
 }
