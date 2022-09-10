@@ -9,20 +9,18 @@ import org.springframework.boot.test.context.SpringBootTest;
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
-class CourseMaterialRepositoryTest {
+class CourseRepositoryTest {
 
     @Autowired
-    CourseMaterialRepository courseMaterialRepository;
+    CourseRepository courseRepository;
 
     @Test
     public void save()
     {
-        Course course = Course.builder().credits(6).title("DSA").build();
+        CourseMaterial courseMaterial = CourseMaterial.builder().url("www.google.com").build();
 
-//        CourseMaterial courseMaterial = CourseMaterial.builder().courseObject(course).url("WWW.prajval.com").build();
+        Course course = Course.builder().title("hello").credits(11).courseMaterial(courseMaterial).build();
 
-//        courseMaterialRepository.save(courseMaterial);
+        courseRepository.save(course);
     }
-
-
 }

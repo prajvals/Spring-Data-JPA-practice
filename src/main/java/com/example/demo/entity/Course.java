@@ -26,4 +26,12 @@ public class Course {
     private Long courseId;
     private String title;
     private Integer credits;
+
+    @OneToOne(
+            cascade = CascadeType.ALL
+    )
+    @JoinColumn(name = "course_material_id",
+            referencedColumnName = "courseMaterialId"
+    )
+    private CourseMaterial courseMaterial;
 }
