@@ -18,9 +18,12 @@ class CourseRepositoryTest {
     public void save()
     {
         CourseMaterial courseMaterial = CourseMaterial.builder().url("www.google.com").build();
-
         Course course = Course.builder().title("hello").credits(11).courseMaterial(courseMaterial).build();
-
         courseRepository.save(course);
+    }
+    @Test
+    public void fetchDetails()
+    {
+        System.out.println(courseRepository.findAll());
     }
 }
