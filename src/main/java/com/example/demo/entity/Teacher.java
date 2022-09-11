@@ -27,7 +27,7 @@ public class Teacher {
     private Long teacherId;
     private String firstName;
     private String LastName;
-//implementing many to one hence commented out this part
+//implementing many to one hence commented out this part this was for one to many
 //    @OneToMany(
 //            cascade = CascadeType.ALL
 //    )

@@ -2,6 +2,7 @@ package com.example.demo.repository;
 
 import com.example.demo.entity.Course;
 import com.example.demo.entity.CourseMaterial;
+import com.example.demo.entity.Student;
 import com.example.demo.entity.Teacher;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -66,7 +67,20 @@ class CourseRepositoryTest {
     }
     //see we use pageable to implement pagination, in the sense that it restricts the number of or the number of entries that do come up alright yeah
 
+    @Test
+    public void testingTheManyToManyRelation()
+    {
+        CourseMaterial courseMaterial = CourseMaterial.builder().url("www.google.com").build();
 
+        Teacher teacher = Teacher.builder().firstName("prajval").LastName("singh").build();
 
+        Course course = Course.builder().title("freakItOut").credits(6).teacher(teacher).courseMaterial(courseMaterial).build();
+
+        Student student = Student.builder().firstName("hello").lastName("Okay").emailId("oho@gmail.com").build();
+
+        course.addStudents(student);
+
+        courseRepository.save(course);
+    }
 
 }

@@ -25,7 +25,7 @@ public class Student {
             allocationSize = 1
     )
     @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "student_sequence")
-    private Long StudentId;
+    private Long studentId;
     private String firstName;
     private String lastName;
     @Column(
