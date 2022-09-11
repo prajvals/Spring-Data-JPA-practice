@@ -27,8 +27,8 @@ public class Course {
 
     @OneToOne(
             cascade = CascadeType.ALL,
-            fetch = FetchType.LAZY
-//            optional = false
+            fetch = FetchType.LAZY,
+            optional = false
     )
     @JoinColumn(name = "course_material_id",
             referencedColumnName = "courseMaterialId"
