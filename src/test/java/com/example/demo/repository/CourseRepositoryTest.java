@@ -6,6 +6,7 @@ import com.example.demo.entity.Teacher;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
@@ -56,15 +57,15 @@ class CourseRepositoryTest {
         System.out.println(courseRepository.findAll(firstPageWithThreeEntries).getTotalElements());
     }
 
+    //using pagination with a custom method
     @Test
     public void findAllPaginationWithSorting()
     {
-        Pageable firstPageWithThreeEntriesWithSortingTitle = PageRequest.of(0,3, Sort.by("title").descending());
-        System.out.println(courseRepository.findAll(firstPageWithThreeEntriesWithSortingTitle).getContent());
-
-        Pageable firstPageWithThreeEntriesWithSortingTitleAndCredits = PageRequest.of(0,3, Sort.by("title").descending().and(Sort.by("credits")));
-        System.out.println(courseRepository.findAll(firstPageWithThreeEntriesWithSortingTitleAndCredits).getContent());
+        Pageable customMethodPagination = PageRequest.of(0,3);
+        System.out.println(courseRepository.findByTitleContaining("D",customMethodPagination).getContent());
     }
+    //see we use pageable to implement pagination, in the sense that it restricts the number of or the number of entries that do come up alright yeah
+
 
 
 
