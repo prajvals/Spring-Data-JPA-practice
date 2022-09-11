@@ -81,6 +81,13 @@ class CourseRepositoryTest {
         course.addStudents(student);
 
         courseRepository.save(course);
+
     }
 
 }
+/*
+things are made, but there are the following things I need more clarity on
+
+why the fetch doesnt work with bidirectional mapping in the course object
+and why the index of teachers so fucked up, need to work on these things
+ */

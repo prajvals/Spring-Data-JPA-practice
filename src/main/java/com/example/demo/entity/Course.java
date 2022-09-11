@@ -73,8 +73,7 @@ public class Course {
     {
         if(studentList==null)
             studentList = new ArrayList<Student>();
-        else
-            studentList.add(student);
+        studentList.add(student);
     }
 }
 /*
