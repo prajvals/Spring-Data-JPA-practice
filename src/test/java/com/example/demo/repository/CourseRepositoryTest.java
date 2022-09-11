@@ -6,11 +6,11 @@ import com.example.demo.entity.Teacher;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 class CourseRepositoryTest {
@@ -43,5 +43,23 @@ class CourseRepositoryTest {
     public void fetchDetails()
     {
         System.out.println(courseRepository.findAll());
+    }
+
+    @Test
+    public void findAllPagination()
+    {
+        Pageable firstPageWithThreeEntries = PageRequest.of(0,3);
+        Pageable secondPageWithTwoEntries = PageRequest.of(1, 2);
+
+        System.out.println(courseRepository.findAll(firstPageWithThreeEntries).getContent());
+
+        System.out.println(courseRepository.findAll(firstPageWithThreeEntries).getTotalPages());
+
+        System.out.println(courseRepository.findAll(firstPageWithThreeEntries).getTotalElements());
+
+//        Pageable firstPageWithThreeRecords = PageRequest.of(0,3);
+
+
+
     }
 }
