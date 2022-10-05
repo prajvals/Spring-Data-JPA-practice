@@ -2,7 +2,7 @@
 
 1. A Spring Boot application exploring the database Connection using JPA-Hibernate and MySQL Server with different types of Mappings.
 
-2. Tech Stack Used: Spring Boot, JPA-Hibernate, MySQL Server, Java 8, Lombok, Maven, IntellJ Idea, Postman.
+2. Tech Stack Used: **Spring Boot**, **JPA-Hibernate**, **MySQL Server**, **Java**, Lombok, Maven, IntellJ Idea, Postman.
 
 3. Prominent Features Include: 
 
